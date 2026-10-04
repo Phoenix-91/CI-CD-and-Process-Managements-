@@ -1,4 +1,3 @@
-```yaml
 name: CI
 
 on:
@@ -21,4 +20,3 @@ jobs:
             echo "README.md is missing ❌"
             exit 1
           fi
-```
