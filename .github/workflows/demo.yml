@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Check README
+        run: |
+          if [ -f readme.md ]; then
+            echo "readme.md exists"
+          else
+            echo "readme.md is missing"
+            exit 1
+          fi
